@@ -32,7 +32,7 @@
     .logo{
         position: absolute;
         top: 4rem;
-        width:10%;
+        width:50%;
         cursor: pointer;
         z-index: 2;
     }
@@ -89,9 +89,9 @@
     }
 </style>
 </head>
-<body>
+<body> 
     <div class="container">
-        <video class="video" width="2000px" heigh="500px" autoplay>
+        <video class="video" width="2000px" heigh="500px" autoplay playsinline>
             <source src="GP.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -114,6 +114,14 @@
     
 </body>
 <script>
+    // function setupVideo () {
+    //     var video = document.querySelector('.video')
+    //     video.display = "unset";
+    //     video.play();
+    //     video.addEventListener('ended', function() {
+    //         video.style.display = "none";
+    //     })
+    // }
     const link = [
         "https://www.facebook.com/profile.php?id=100005193995326",
         "https://www.instagram.com/_min_tran_1911/",
@@ -156,10 +164,11 @@
             currentTheme = "Yoru";
             logo.src = "BeroLogo2.png";
             video.src = "Yoru.mp4";
+            video.display = "unset";
             for (let i=0; i<link.length; i++){
                 contents[i].src=contentB[i];
             }
-            setupVideo(video);
+            //setupVideo();
         } else {
             theme.src = "Yoru.png";
             theme.style.right = "-5rem";
@@ -169,7 +178,7 @@
             for (let i=0; i<link.length; i++){
                 contents[i].src=contentA[i];
             }
-            setupVideo(video);
+            //setupVideo();
         }
     }
 </script>
